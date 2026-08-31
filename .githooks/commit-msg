@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+set -eu
+
+# Commit messages carry the change, not the tooling.
+root=$(git rev-parse --show-toplevel)
+sh "$root/scripts/check-commit-message.sh" < "$1"
