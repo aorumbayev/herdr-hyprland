@@ -1,0 +1,69 @@
+id = "herdr-hyprland"
+name = "Hyprland Keys"
+version = "0.1.0"
+min_herdr_version = "0.8.2"
+description = "Hyprland navigation keys for herdr panes, tabs, and workspaces"
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["go", "build", "-o", "bin/herdr-hyprland", "./cmd/herdr-hyprland"]
+
+# Writes the alt keymap preset into ~/.config/herdr/config.toml with a
+# timestamped backup beside it. Additive: every herdr prefix+* default keeps
+# working. `herdr config reset-keys` removes it again.
+[[build]]
+command = ["bin/herdr-hyprland", "setup"]
+
+[[actions]]
+id = "move-to-tab-1"
+title = "Move pane to tab 1"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "1"]
+
+[[actions]]
+id = "move-to-tab-2"
+title = "Move pane to tab 2"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "2"]
+
+[[actions]]
+id = "move-to-tab-3"
+title = "Move pane to tab 3"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "3"]
+
+[[actions]]
+id = "move-to-tab-4"
+title = "Move pane to tab 4"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "4"]
+
+[[actions]]
+id = "move-to-tab-5"
+title = "Move pane to tab 5"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "5"]
+
+[[actions]]
+id = "move-to-tab-6"
+title = "Move pane to tab 6"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "6"]
+
+[[actions]]
+id = "move-to-tab-7"
+title = "Move pane to tab 7"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "7"]
+
+[[actions]]
+id = "move-to-tab-8"
+title = "Move pane to tab 8"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "8"]
+
+[[actions]]
+id = "move-to-tab-9"
+title = "Move pane to tab 9"
+contexts = ["pane"]
+command = ["bin/herdr-hyprland", "move-to-tab", "9"]
